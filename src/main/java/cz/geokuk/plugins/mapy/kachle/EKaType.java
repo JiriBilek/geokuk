@@ -7,15 +7,15 @@ import javax.swing.KeyStroke;
 public enum EKaType {
 
     // Mapové podklady, dále neprůhledné
-	BASE_M(true, false, 0, 16, 16, "Základní", "Základní mapa se silnicemi.", KeyEvent.VK_Z, KeyStroke.getKeyStroke('z'), new MapyCzUrlBuilder("base-m")),
-	TURIST_M(true, false, 0, 16, 16, "Turistická", "Turistická mapa.", KeyEvent.VK_T, KeyStroke.getKeyStroke('t'), new MapyCzUrlBuilder("turist-m")),
-	OPHOTO_M(true, true, 0, 18, 16, "Letecká", "Letecká ortho foto mapa", KeyEvent.VK_L, KeyStroke.getKeyStroke('f'), new MapyCzUrlBuilder("ophoto-m")),
+	BASE_M(true, false, 0, 18, 18, "Základní", "Základní mapa se silnicemi.", KeyEvent.VK_Z, KeyStroke.getKeyStroke('z'), new MapyCzUrlBuilder("base-m")),
+	TURIST_M(true, false, 0, 18, 18, "Turistická", "Turistická mapa.", KeyEvent.VK_T, KeyStroke.getKeyStroke('t'), new MapyCzUrlBuilder("turist-m")),
+	OPHOTO_M(true, true, 0, 19, 19, "Letecká", "Letecká ortho foto mapa", KeyEvent.VK_L, KeyStroke.getKeyStroke('f'), new MapyCzUrlBuilder("ophoto-m")),
 	WTURIST_WINTER_M(true, false, 0, 16, 16, "Turistická zimní", "Zimní turistická mapa.", KeyEvent.VK_M, KeyStroke.getKeyStroke('w'), new MapyCzUrlBuilder("wturist_winter-m")),
 	TURIST_AQUATIC_M(true, false, 0, 16, 16, "Letní", "Letní turistická mapa s koupalištěmi", KeyEvent.VK_F, KeyStroke.getKeyStroke('f'), new MapyCzUrlBuilder("wturist_aquatic-m")),
 	OPHOTO1012_M(true, true, 0, 18, 16, "Letecká 2012", "Starší fotomapa", 0, null, new MapyCzUrlBuilder("ophoto1012-m")),
 	OPHOTO0406_M(true, true, 0, 18, 16, "Letecká 2006", "Starší fotomapa", KeyEvent.VK_6, null, new MapyCzUrlBuilder("ophoto0406-m")),
 	OPHOTO0203_M(true, true, 0, 16, 16, "Letecká 2003", "Starší fotomapa", KeyEvent.VK_3, null, new MapyCzUrlBuilder("ophoto0203-m")),
-	ZEMEPIS_M(true, false, 0, 16, 16, "Zeměpisná", "Zeměpisná mapa", KeyEvent.VK_G, KeyStroke.getKeyStroke('g'), new MapyCzUrlBuilder("zemepis-m")),
+	ZEMEPIS_M(true, false, 0, 16, 16, "Zeměpisná", "Zeměpisná mapa", 0, null, new MapyCzUrlBuilder("zemepis-m")),
 	ARMY2_M(true, true, 0, 13, 13, "Historická", "Historická mapa z let 1836-52", KeyEvent.VK_H, KeyStroke.getKeyStroke('h'), new MapyCzUrlBuilder("army2-m")),
 
 	OPEN_STREAT(true, false, 0, 18, 18, "Openstreetmap", "Openstreetmap.", KeyEvent.VK_O, KeyStroke.getKeyStroke('o'), new OpenStreatMapUrlBuilder("https://b.tile.openstreetmap.org/")),
@@ -33,6 +33,11 @@ public enum EKaType {
 
 	// Todo vyřešit problémy s certifikátem
 	// OPEN_CYKLO(true, false, 0, 18, 18, "Open cyclo", "Open streat map.", KeyEvent.VK_Y, KeyStroke.getKeyStroke('c') , new OpenStreatMapUrlBuilder("https://b.tile.thunderforest.com/cycle/")),
+	
+	// jb: pomůže doplnit startcom do cacerts (http://stackoverflow.com/questions/6659360/how-to-solve-javax-net-ssl-sslhandshakeexception-error)
+	OPEN_CYKLO(true, false, 0, 18, 18, "Open cyclo", "Open street map.", KeyEvent.VK_Y, KeyStroke.getKeyStroke('y'), new OpenStreatMapUrlBuilder("https://b.tile.thunderforest.com/cycle/")),
+	OPHOTO_SPAIN(true, true, 0, 19, 19, "Letecká ES", "Letecká mapa Španělska", KeyEvent.VK_E, KeyStroke.getKeyStroke('e'), new IgnEsMapUrlBuilder("http://www.ign.es/wmts/pnoa-ma")),
+	OPHOTO_GOOGLE(true, true, 0, 19, 19, "Letecká Google", "Letecká mapa Google", KeyEvent.VK_G, KeyStroke.getKeyStroke('g'), new GoogleOphotoMapUrlBuilder("http://khm1.googleapis.com/kh")),
 
 	// Překryvná data, kachle musí být průhledné.
 	TTUR_M(false, "Turistické trasy", "Turistické trasy, červená, modrá, zelená, žlutá.", KeyEvent.VK_U, KeyStroke.getKeyStroke('u'), new MapyCzUrlBuilder("hybrid-tz-m")),
