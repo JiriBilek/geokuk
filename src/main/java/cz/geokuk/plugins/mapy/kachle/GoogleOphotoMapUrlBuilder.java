@@ -17,10 +17,12 @@ public class GoogleOphotoMapUrlBuilder implements KachleUrlBuilder {
 		final StringBuilder sb = new StringBuilder();
 		final KaLoc kaloc = kaOne.getLoc();
 
-		//http://khm1.googleapis.com/kh?v=702&hl=cs&&x=7813&y=6367&z=14
+		//not running: http://khm1.googleapis.com/kh?v=702&hl=cs&&x=7813&y=6367&z=14
+		// https://mt1.google.com/vt/lyrs=s&x=7813&y=6367&z=14
+		// https://answers.splunk.com/answers/186394/how-to-specify-google-maps-url-for-map-tiles-in-sp.html
 		
 		sb.append(urlBase);
-		sb.append("?v=702&hl=cs&&x=");
+		sb.append("&x=");
 		sb.append(kaloc.getFromSzUnsignedX());
 		sb.append("&y=");
 		sb.append(kaloc.getFromSzUnsignedY());

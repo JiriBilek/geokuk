@@ -119,7 +119,7 @@ public class WgsParser {
 		}
 
 		private Character urciToSpravnePismeno(final Character pismeno1, final Character pismeno2) {
-			// System.out.println("soluad? " + pismeno1 + pismeno2);
+			// System.out.println("soulad? " + pismeno1 + pismeno2);
 			if (pismeno1 == null || pismeno2 == null) {
 				return null;
 			}

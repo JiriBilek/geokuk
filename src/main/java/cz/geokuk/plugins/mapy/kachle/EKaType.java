@@ -37,7 +37,7 @@ public enum EKaType {
 	// jb: pomůže doplnit startcom do cacerts (http://stackoverflow.com/questions/6659360/how-to-solve-javax-net-ssl-sslhandshakeexception-error)
 	OPEN_CYKLO(true, false, 0, 18, 18, "Open cyclo", "Open street map.", KeyEvent.VK_Y, KeyStroke.getKeyStroke('y'), new OpenStreatMapUrlBuilder("https://b.tile.thunderforest.com/cycle/")),
 	OPHOTO_SPAIN(true, true, 0, 19, 19, "Letecká ES", "Letecká mapa Španělska", KeyEvent.VK_E, KeyStroke.getKeyStroke('e'), new IgnEsMapUrlBuilder("http://www.ign.es/wmts/pnoa-ma")),
-	OPHOTO_GOOGLE(true, true, 0, 19, 19, "Letecká Google", "Letecká mapa Google", KeyEvent.VK_G, KeyStroke.getKeyStroke('g'), new GoogleOphotoMapUrlBuilder("http://khm1.googleapis.com/kh")),
+	OPHOTO_GOOGLE(true, true, 0, 19, 19, "Letecká Google", "Letecká mapa Google", KeyEvent.VK_G, KeyStroke.getKeyStroke('g'), new GoogleOphotoMapUrlBuilder("https://mt1.google.com/vt/lyrs=s")),
 
 	// Překryvná data, kachle musí být průhledné.
 	TTUR_M(false, "Turistické trasy", "Turistické trasy, červená, modrá, zelená, žlutá.", KeyEvent.VK_U, KeyStroke.getKeyStroke('u'), new MapyCzUrlBuilder("hybrid-tz-m")),
