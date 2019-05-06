@@ -9,6 +9,7 @@ public enum EKaType {
     // Mapové podklady, dále neprůhledné
 	BASE_M(true, false, 0, 18, 18, "Základní", "Základní mapa se silnicemi.", KeyEvent.VK_Z, KeyStroke.getKeyStroke('z'), new MapyCzUrlBuilder("base-m")),
 	TURIST_M(true, false, 0, 18, 18, "Turistická", "Turistická mapa.", KeyEvent.VK_T, KeyStroke.getKeyStroke('t'), new MapyCzUrlBuilder("turist-m")),
+	WTURIST_M(true, false, 0, 18, 18, "Turistická-w", "Turistická mapa (w).", KeyEvent.VK_W, KeyStroke.getKeyStroke('w'), new MapyCzUrlBuilder("wturist-m")),
 	OPHOTO_M(true, true, 0, 19, 19, "Letecká", "Letecká ortho foto mapa", KeyEvent.VK_L, KeyStroke.getKeyStroke('f'), new MapyCzUrlBuilder("ophoto-m")),
 	WTURIST_WINTER_M(true, false, 0, 16, 16, "Turistická zimní", "Zimní turistická mapa.", KeyEvent.VK_M, KeyStroke.getKeyStroke('w'), new MapyCzUrlBuilder("wturist_winter-m")),
 	TURIST_AQUATIC_M(true, false, 0, 16, 16, "Letní", "Letní turistická mapa s koupalištěmi", KeyEvent.VK_F, KeyStroke.getKeyStroke('f'), new MapyCzUrlBuilder("wturist_aquatic-m")),
