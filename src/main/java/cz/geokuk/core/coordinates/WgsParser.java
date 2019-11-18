@@ -113,9 +113,6 @@ public class WgsParser {
 			case 'S':
 			case 'W':
 			case '-': // povoluje se také mínus pro záporné souřadnice
-/*			case 'V':
-			case 'J':
-			case 'Z':  */
 				return pismeno; // to tam smí být
 			}
 			return null; // je tam špatné písmeno
@@ -195,20 +192,11 @@ public class WgsParser {
 		povolVariaci(' ', '-');
 		povolVariaci('-', '-');
 
-		// české
-/*		povolVariaci('S', 'V');
-		povolVariaci('S', 'Z');
-		povolVariaci('J', 'V');
-		povolVariaci('J', 'Z');  */
-
 		// jednostranné
 		povolVariaci('N', ' ');
 		povolVariaci('S', ' ');
 		povolVariaci(' ', 'E');
 		povolVariaci(' ', 'W');
-/*		povolVariaci('J', ' ');
-		povolVariaci(' ', 'Z');
-		povolVariaci(' ', 'V');  */
 	}
 
 	public static void main(final String[] args) {
